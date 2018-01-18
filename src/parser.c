@@ -9,8 +9,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* symbol types */
+enum sym_type {
+	TRANSLATION_UNIT,
+};
+
 /* globals */
 struct var_table objects;
+
+/* tables */
+char const *symbols[] = {
+	[TRANSLATION_UNIT] = "translation_unit",
+};
 
 static char *word_list[] = {
 	"auto", "bool", "break", "case", "char", "const", "continue", "default",
@@ -31,13 +41,39 @@ static char *word_list[] = {
 	";parse", ";quit", ";reset", ";tracking", ";undo", ";warnings", NULL
 };
 
-/* caller responsible for freeing output pointer */
-size_t pre_process(char **restrict output, char const *restrict src)
+static void next_sym(struct str_list *restrict tok_list)
 {
-	/* initial and final preprocessing token count */
-	size_t token_cnt[2] = {0};
+	(void)tok_list;
+}
 
-	(void)word_list, (void)token_cnt;
+static bool accept(struct str_list *restrict tok_list, enum sym_type type)
+{
+	if (true) {
+		next_sym(tok_list);
+		return true;
+	}
+	return false;
+}
 
-	return 0;
+static bool expect(struct str_list *restrict tok_list, enum sym_type type)
+{
+	if (accept(tok_list, type))
+		return true;
+	WARNX("%s: %s", "failure parsing symbol", symbols[type]);
+	return false;
+}
+
+struct str_list pre_process(char const *restrict src)
+{
+	size_t token_cnt = 0;
+	struct str_list tokens = {0};
+
+	(void)word_list, (void)src, (void)token_cnt, (void)expect;
+
+#ifdef _DEBUG
+	FOR_EACH(tokens)
+		puts(tokens.list[i]);
+#endif
+
+	return tokens;
 }
