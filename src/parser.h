@@ -11,7 +11,7 @@
 #include "defs.h"
 #include "vars.h"
 
-struct str_list pre_process(char const *restrict src)
+static inline struct str_list pre_process(char const *restrict src)
 {
 	size_t token_cnt = 0;
 	struct str_list tokens = {0};
