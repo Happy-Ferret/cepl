@@ -8,6 +8,9 @@
 #ifndef PARSER_H
 #define PARSER_H 1
 
+#include "defs.h"
 #include "vars.h"
+
+size_t pre_process(char *restrict output, char const *restrict src);
 
 #endif

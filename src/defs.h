@@ -133,10 +133,17 @@ struct type_list {
 /* struct definition for var-tracking array */
 struct var_list {
 	size_t cnt, max;
-	struct {
+	struct _var {
 		char *id;
 		enum var_type type_spec;
 	} *list;
+};
+
+/* struct definition for object table */
+struct var_table {
+	struct str_list ids;
+	struct type_list types;
+	struct var_list variables;
 };
 
 /* struct definition for generated program sources */

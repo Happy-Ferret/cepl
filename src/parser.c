@@ -9,7 +9,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *word_list[] = {
+/* globals */
+struct var_table objects;
+
+static char *word_list[] = {
 	"auto", "bool", "break", "case", "char", "const", "continue", "default",
 	"do", "double", "else", "enum", "extern", "float", "for", "goto",
 	"if", "inline", "int", "long", "register", "restrict", "return",
@@ -27,3 +30,13 @@ char *word_list[] = {
 	";att", ";function", ";help", ";intel", ";macro", ";output",
 	";parse", ";quit", ";reset", ";tracking", ";undo", ";warnings", NULL
 };
+
+size_t pre_process(char *restrict output, char const *restrict src)
+{
+	/* initial and final preprocessing token count */
+	size_t token_cnt[2] = {0};
+
+	(void)word_list, (void)token_cnt;
+
+	return 0;
+}
