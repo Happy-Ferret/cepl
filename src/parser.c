@@ -63,17 +63,7 @@ static bool expect(struct str_list *restrict tok_list, enum sym_type type)
 	return false;
 }
 
-struct str_list pre_process(char const *restrict src)
+static void translation_unit(void)
 {
-	size_t token_cnt = 0;
-	struct str_list tokens = {0};
-
-	(void)word_list, (void)src, (void)token_cnt, (void)expect;
-
-#ifdef _DEBUG
-	FOR_EACH(tokens)
-		puts(tokens.list[i]);
-#endif
-
-	return tokens;
+	(void)word_list, (void)expect;
 }

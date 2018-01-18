@@ -11,6 +11,19 @@
 #include "defs.h"
 #include "vars.h"
 
-struct str_list pre_process(char const *restrict src);
+struct str_list pre_process(char const *restrict src)
+{
+	size_t token_cnt = 0;
+	struct str_list tokens = {0};
+
+	(void)src, (void)token_cnt;
+
+#ifdef _DEBUG
+	FOR_EACH(tokens)
+		puts(tokens.list[i]);
+#endif
+
+	return tokens;
+}
 
 #endif
