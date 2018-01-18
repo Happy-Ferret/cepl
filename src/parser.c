@@ -19,7 +19,7 @@ struct var_table objects;
 
 /* tables */
 char const *symbols[] = {
-	[TRANSLATION_UNIT] = "translation_unit",
+	[TRANSLATION_UNIT] = "TRANSLATION_UNIT",
 };
 
 static char *word_list[] = {
@@ -41,35 +41,45 @@ static char *word_list[] = {
 	";parse", ";quit", ";reset", ";tracking", ";undo", ";warnings", NULL
 };
 
-static void next_sym(struct str_list *restrict tok_list)
+/* current symbol */
+static char **sym_list;
+/* symbol indices */
+static size_t sym_idx, max_idx;
+
+static void next_sym(void)
 {
-	(void)tok_list;
+#ifdef _DEBUG
+	puts(sym_list[sym_idx]);
+#endif
+	sym_idx++;
 }
 
-static bool accept(struct str_list *restrict tok_list, enum sym_type type)
+static bool accept(enum sym_type type)
 {
 	if (true) {
-		next_sym(tok_list);
+		next_sym();
 		return true;
 	}
 	return false;
 }
 
-static bool expect(struct str_list *restrict tok_list, enum sym_type type)
+static bool expect(enum sym_type type)
 {
-	if (accept(tok_list, type))
+	if (accept(type))
 		return true;
 	WARNX("%s: %s", "failure parsing symbol", symbols[type]);
 	return false;
 }
 
-static void translation_unit(struct str_list *restrict tok_list)
+static void translation_unit(void)
 {
-	(void)tok_list;
+	(void)word_list, (void)expect;
 }
 
 static void start_rule(struct str_list *restrict tok_list)
 {
-	translation_unit(tok_list);
-	(void)word_list, (void)expect;
+	sym_idx = 0;
+	max_idx = tok_list->cnt;
+	sym_list = tok_list->list;
+	translation_unit();
 }
