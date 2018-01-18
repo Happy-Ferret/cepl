@@ -11,7 +11,13 @@
 
 /* symbol types */
 enum sym_type {
+	START_RULE,
 	TRANSLATION_UNIT,
+	COMMENT,
+	EXTERNAL_DECLARATION,
+	FUNCTION_DEFINITION,
+	/* [CONTEXT => 'EXTERNAL DECLARATION'] */
+	DECLARATION,
 };
 
 /* globals */
@@ -19,7 +25,13 @@ struct var_table objects;
 
 /* tables */
 char const *symbols[] = {
+	[START_RULE] = "START_RULE",
 	[TRANSLATION_UNIT] = "TRANSLATION_UNIT",
+	[COMMENT] = "COMMENT",
+	[EXTERNAL_DECLARATION] = "EXTERNAL_DECLARATION",
+	[FUNCTION_DEFINITION] = "FUNCTION_DEFINITION",
+	/* [CONTEXT => 'EXTERNAL DECLARATION'] */
+	[DECLARATION] = "DECLARATION",
 };
 
 static char *word_list[] = {
