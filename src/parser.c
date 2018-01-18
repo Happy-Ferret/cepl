@@ -63,7 +63,13 @@ static bool expect(struct str_list *restrict tok_list, enum sym_type type)
 	return false;
 }
 
-static void translation_unit(void)
+static void translation_unit(struct str_list *restrict tok_list)
 {
+	(void)tok_list;
+}
+
+static void start_rule(struct str_list *restrict tok_list)
+{
+	translation_unit(tok_list);
 	(void)word_list, (void)expect;
 }
