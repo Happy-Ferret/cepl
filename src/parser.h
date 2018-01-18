@@ -11,6 +11,6 @@
 #include "defs.h"
 #include "vars.h"
 
-size_t pre_process(char *restrict output, char const *restrict src);
+size_t pre_process(char **restrict output, char const *restrict src);
 
 #endif

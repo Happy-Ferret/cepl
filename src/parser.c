@@ -31,7 +31,8 @@ static char *word_list[] = {
 	";parse", ";quit", ";reset", ";tracking", ";undo", ";warnings", NULL
 };
 
-size_t pre_process(char *restrict output, char const *restrict src)
+/* caller responsible for freeing output pointer */
+size_t pre_process(char **restrict output, char const *restrict src)
 {
 	/* initial and final preprocessing token count */
 	size_t token_cnt[2] = {0};
