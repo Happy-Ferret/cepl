@@ -18,7 +18,7 @@ enum sym_type {
 	SELECTION_STATEMENT, LABELED_STATEMENT, EXPRESSION_STATEMENT,
 };
 
-/* GLOBALS */
+/* globals */
 struct var_table objects;
 
 /* tables */
