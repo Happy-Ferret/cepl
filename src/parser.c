@@ -88,16 +88,15 @@ char const *symbols[] = {
 };
 
 /* current symbol */
-static char **sym_list;
-/* symbol indices */
-static size_t sym_idx, max_idx;
+static size_t sym_idx;
+static struct str_list tok_list;
 
 static void next_sym(void)
 {
-#ifdef _DEBUG
-	puts(sym_list[sym_idx]);
-#endif
 	sym_idx++;
+#ifdef _DEBUG
+	printf("prev/cur: (%s, %s)\n", tok_list.list[sym_idx - 1], tok_list.list[sym_idx]);
+#endif
 }
 
 static bool accept(enum sym_type type)
@@ -117,19 +116,13 @@ static bool expect(enum sym_type type)
 	return false;
 }
 
-static void start_rule(struct str_list *restrict tok_list);
+static void start_rule(void);
 static void translation_unit(void)
 {
-	(void)expect, (void)start_rule;
+	(void)tok_list, (void)expect, (void)start_rule;
 }
 
-static void start_rule(struct str_list *restrict tok_list)
+static void start_rule(void)
 {
-	if (!tok_list)
-		return;
-	sym_idx = 0;
-	max_idx = tok_list->cnt;
-	sym_list = tok_list->list;
-	(void)tok_list;
 	translation_unit();
 }

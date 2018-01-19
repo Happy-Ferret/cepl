@@ -19,7 +19,7 @@ static inline struct str_list pre_process(char const *restrict src)
 	(void)src, (void)token_cnt;
 
 #ifdef _DEBUG
-	FOR_EACH(tokens)
+	FOR_EACH_IN(tokens)
 		puts(tokens.list[i]);
 #endif
 
