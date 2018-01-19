@@ -11,7 +11,8 @@
 
 /* symbol types */
 enum sym_type {
-	START_RULE, TRANSLATION_UNIT, COMMENT, EXTERNAL_DECLARATION,
+	START_RULE = 0,
+	TRANSLATION_UNIT, COMMENT, EXTERNAL_DECLARATION,
 	FUNCTION_DEFINITION, DECLARATION, DECLARATION_SPECIFIERS,
 	DECLARATOR, COMPOUND_STATEMENT, BLOCK_ITEM_LIST, BLOCK_ITEM,
 	STATEMENT, STATEMENT_LIST, JUMP_STATEMENT, ITERATION_STATEMENT,
@@ -120,7 +121,7 @@ static void next_sym(void)
 
 static bool accept(enum sym_type type)
 {
-	if (true) {
+	if (type) {
 		next_sym();
 		return true;
 	}
@@ -135,15 +136,20 @@ static bool expect(enum sym_type type)
 	return false;
 }
 
+static void start_rule(struct str_list *restrict tok_list);
 static void translation_unit(void)
 {
 	(void)word_list, (void)expect;
+	start_rule(NULL);
 }
 
 static void start_rule(struct str_list *restrict tok_list)
 {
+	if (!tok_list)
+		return;
 	sym_idx = 0;
 	max_idx = tok_list->cnt;
 	sym_list = tok_list->list;
+	(void)tok_list;
 	translation_unit();
 }
