@@ -41,92 +41,92 @@ enum sym_type {
 };
 
 /* prototypes */
-static void start_rule(void);
-static void translation_unit_rule(void);
-static void comment_rule(void);
-static void external_declaration_rule(void);
-static void function_definition_rule(void);
-static void function_definition_rule(void);
-static void declaration_specifiers_rule(void);
-static void declarator_rule(void);
-static void compound_statement_rule(void);
-static void declaration_rule(void);
-static void block_item_list_rule(void);
-static void block_item_rule(void);
-static void statement_rule(void);
-static void statement_list_rule(void);
-static void jump_statement_rule(void);
-static void iteration_statement_rule(void);
-static void selection_statement_rule(void);
-static void labeled_statement_rule(void);
-static void expression_statement_rule(void);
-static void for_expression_rule(void);
-static void for_increment_rule(void);
-static void for_initialization_rule(void);
-static void conditional_expression_rule(void);
-static void conditional_ternary_expression_rule(void);
-static void assignment_operator_rule(void);
-static void constant_expression_rule(void);
-static void logical_or_and_expression_rule(void);
-static void log_or_and_bit_or_and_eq_rule(void);
-static void rel_mul_add_ex_op_rule(void);
-static void unary_operator_rule(void);
-static void closure_rule(void);
-static void static_assert_rule(void);
-static void static_assert_declaration_rule(void);
-static void declaration_list_rule(void);
-static void init_declarator_list_rule(void);
-static void init_declarator_rule(void);
-static void initializer_rule(void);
-static void initializer_list_rule(void);
-static void designation_rule(void);
-static void designator_list_rule(void);
-static void designator_rule(void);
-static void unary_expression_rule(void);
-static void alignof_rule(void);
-static void postfix_productions_rule(void);
-static void postfix_expression_rule(void);
-static void postfix_suffix_rule(void);
-static void argument_expression_list_rule(void);
-static void narrow_closure_rule(void);
-static void primary_expression_rule(void);
-static void generic_selection_rule(void);
-static void generic_assoc_list_rule(void);
-static void generic_association_rule(void);
-static void alignas_rule(void);
-static void alignment_specifier_rule(void);
-static void array_qualifiers_rule(void);
-static void array_declarator_rule(void);
-static void identifier_list_rule(void);
-static void parameter_type_list_rule(void);
-static void parameter_list_rule(void);
-static void parameter_declaration_rule(void);
-static void abstract_declarator_rule(void);
-static void direct_abstract_declarator_rule(void);
-static void dad_rule(void);
-static void identifier_rule(void);
-static void pointer_rule(void);
-static void type_qualifier_list_rule(void);
-static void function_specifier_rule(void);
-static void storage_class_specifier_rule(void);
-static void type_qualifier_rule(void);
-static void atomic_type_specifier_rule(void);
-static void type_specifier_rule(void);
-static void typedef_name_rule(void);
-static void struct_or_union_specifier_rule(void);
-static void struct_declaration_list_rule(void);
-static void struct_declaration_rule(void);
-static void type_name_rule(void);
-static void specifier_qualifier_list_rule(void);
-static void struct_or_union_rule(void);
-static void enum_specifier_rule(void);
-static void enumerator_list_rule(void);
-static void enumerator_rule(void);
-static void comment_c_rule(void);
-static void comment_cxx_rule(void);
-static void constant_rule(void);
-static void identifier_word_rule(void);
-static void reserved_rule(void);
+void start_rule(void);
+void translation_unit_rule(void);
+void comment_rule(void);
+void external_declaration_rule(void);
+void function_definition_rule(void);
+void function_definition_rule(void);
+void declaration_specifiers_rule(void);
+void declarator_rule(void);
+void compound_statement_rule(void);
+void declaration_rule(void);
+void block_item_list_rule(void);
+void block_item_rule(void);
+void statement_rule(void);
+void statement_list_rule(void);
+void jump_statement_rule(void);
+void iteration_statement_rule(void);
+void selection_statement_rule(void);
+void labeled_statement_rule(void);
+void expression_statement_rule(void);
+void for_expression_rule(void);
+void for_increment_rule(void);
+void for_initialization_rule(void);
+void conditional_expression_rule(void);
+void conditional_ternary_expression_rule(void);
+void assignment_operator_rule(void);
+void constant_expression_rule(void);
+void logical_or_and_expression_rule(void);
+void log_or_and_bit_or_and_eq_rule(void);
+void rel_mul_add_ex_op_rule(void);
+void unary_operator_rule(void);
+void closure_rule(void);
+void static_assert_rule(void);
+void static_assert_declaration_rule(void);
+void declaration_list_rule(void);
+void init_declarator_list_rule(void);
+void init_declarator_rule(void);
+void initializer_rule(void);
+void initializer_list_rule(void);
+void designation_rule(void);
+void designator_list_rule(void);
+void designator_rule(void);
+void unary_expression_rule(void);
+void alignof_rule(void);
+void postfix_productions_rule(void);
+void postfix_expression_rule(void);
+void postfix_suffix_rule(void);
+void argument_expression_list_rule(void);
+void narrow_closure_rule(void);
+void primary_expression_rule(void);
+void generic_selection_rule(void);
+void generic_assoc_list_rule(void);
+void generic_association_rule(void);
+void alignas_rule(void);
+void alignment_specifier_rule(void);
+void array_qualifiers_rule(void);
+void array_declarator_rule(void);
+void identifier_list_rule(void);
+void parameter_type_list_rule(void);
+void parameter_list_rule(void);
+void parameter_declaration_rule(void);
+void abstract_declarator_rule(void);
+void direct_abstract_declarator_rule(void);
+void dad_rule(void);
+void identifier_rule(void);
+void pointer_rule(void);
+void type_qualifier_list_rule(void);
+void function_specifier_rule(void);
+void storage_class_specifier_rule(void);
+void type_qualifier_rule(void);
+void atomic_type_specifier_rule(void);
+void type_specifier_rule(void);
+void typedef_name_rule(void);
+void struct_or_union_specifier_rule(void);
+void struct_declaration_list_rule(void);
+void struct_declaration_rule(void);
+void type_name_rule(void);
+void specifier_qualifier_list_rule(void);
+void struct_or_union_rule(void);
+void enum_specifier_rule(void);
+void enumerator_list_rule(void);
+void enumerator_rule(void);
+void comment_c_rule(void);
+void comment_cxx_rule(void);
+void constant_rule(void);
+void identifier_word_rule(void);
+void reserved_rule(void);
 
 struct prod_rule {
 	char *name;
@@ -272,7 +272,7 @@ struct prod_rule symbols[] = {
 static size_t sym_idx;
 static struct str_list tok_list;
 
-static void next_sym(void)
+static inline void next_sym(void)
 {
 	sym_idx++;
 #ifdef _DEBUG
@@ -280,7 +280,7 @@ static void next_sym(void)
 #endif
 }
 
-static bool accept(enum sym_type type)
+static inline bool accept(enum sym_type type)
 {
 	if (type) {
 		next_sym();
@@ -289,7 +289,7 @@ static bool accept(enum sym_type type)
 	return false;
 }
 
-static bool expect(enum sym_type type)
+static inline bool expect(enum sym_type type)
 {
 	if (accept(type))
 		return true;
@@ -297,12 +297,12 @@ static bool expect(enum sym_type type)
 	return false;
 }
 
-static void translation_unit_rule(void)
+void translation_unit_rule(void)
 {
 	(void)tok_list, (void)expect, (void)start_rule;
 }
 
-static void start_rule(void)
+void start_rule(void)
 {
 	translation_unit_rule();
 }
