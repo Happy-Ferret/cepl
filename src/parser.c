@@ -46,7 +46,6 @@ void translation_unit_rule(void);
 void comment_rule(void);
 void external_declaration_rule(void);
 void function_definition_rule(void);
-void function_definition_rule(void);
 void declaration_specifiers_rule(void);
 void declarator_rule(void);
 void compound_statement_rule(void);
@@ -305,4 +304,419 @@ void translation_unit_rule(void)
 void start_rule(void)
 {
 	translation_unit_rule();
+}
+
+void comment_rule(void)
+{
+	/* implementation */
+}
+
+void external_declaration_rule(void)
+{
+	/* implementation */
+}
+
+void function_definition_rule(void)
+{
+	/* implementation */
+}
+
+void declaration_specifiers_rule(void)
+{
+	/* implementation */
+}
+
+void declarator_rule(void)
+{
+	/* implementation */
+}
+
+void compound_statement_rule(void)
+{
+	/* implementation */
+}
+
+void declaration_rule(void)
+{
+	/* implementation */
+}
+
+void block_item_list_rule(void)
+{
+	/* implementation */
+}
+
+void block_item_rule(void)
+{
+	/* implementation */
+}
+
+void statement_rule(void)
+{
+	/* implementation */
+}
+
+void statement_list_rule(void)
+{
+	/* implementation */
+}
+
+void jump_statement_rule(void)
+{
+	/* implementation */
+}
+
+void iteration_statement_rule(void)
+{
+	/* implementation */
+}
+
+void selection_statement_rule(void)
+{
+	/* implementation */
+}
+
+void labeled_statement_rule(void)
+{
+	/* implementation */
+}
+
+void expression_statement_rule(void)
+{
+	/* implementation */
+}
+
+void for_expression_rule(void)
+{
+	/* implementation */
+}
+
+void for_increment_rule(void)
+{
+	/* implementation */
+}
+
+void for_initialization_rule(void)
+{
+	/* implementation */
+}
+
+void conditional_expression_rule(void)
+{
+	/* implementation */
+}
+
+void conditional_ternary_expression_rule(void)
+{
+	/* implementation */
+}
+
+void assignment_operator_rule(void)
+{
+	/* implementation */
+}
+
+void constant_expression_rule(void)
+{
+	/* implementation */
+}
+
+void logical_or_and_expression_rule(void)
+{
+	/* implementation */
+}
+
+void log_or_and_bit_or_and_eq_rule(void)
+{
+	/* implementation */
+}
+
+void rel_mul_add_ex_op_rule(void)
+{
+	/* implementation */
+}
+
+void unary_operator_rule(void)
+{
+	/* implementation */
+}
+
+void closure_rule(void)
+{
+	/* implementation */
+}
+
+void static_assert_rule(void)
+{
+	/* implementation */
+}
+
+void static_assert_declaration_rule(void)
+{
+	/* implementation */
+}
+
+void declaration_list_rule(void)
+{
+	/* implementation */
+}
+
+void init_declarator_list_rule(void)
+{
+	/* implementation */
+}
+
+void init_declarator_rule(void)
+{
+	/* implementation */
+}
+
+void initializer_rule(void)
+{
+	/* implementation */
+}
+
+void initializer_list_rule(void)
+{
+	/* implementation */
+}
+
+void designation_rule(void)
+{
+	/* implementation */
+}
+
+void designator_list_rule(void)
+{
+	/* implementation */
+}
+
+void designator_rule(void)
+{
+	/* implementation */
+}
+
+void unary_expression_rule(void)
+{
+	/* implementation */
+}
+
+void alignof_rule(void)
+{
+	/* implementation */
+}
+
+void postfix_productions_rule(void)
+{
+	/* implementation */
+}
+
+void postfix_expression_rule(void)
+{
+	/* implementation */
+}
+
+void postfix_suffix_rule(void)
+{
+	/* implementation */
+}
+
+void argument_expression_list_rule(void)
+{
+	/* implementation */
+}
+
+void narrow_closure_rule(void)
+{
+	/* implementation */
+}
+
+void primary_expression_rule(void)
+{
+	/* implementation */
+}
+
+void generic_selection_rule(void)
+{
+	/* implementation */
+}
+
+void generic_assoc_list_rule(void)
+{
+	/* implementation */
+}
+
+void generic_association_rule(void)
+{
+	/* implementation */
+}
+
+void alignas_rule(void)
+{
+	/* implementation */
+}
+
+void alignment_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void array_qualifiers_rule(void)
+{
+	/* implementation */
+}
+
+void array_declarator_rule(void)
+{
+	/* implementation */
+}
+
+void identifier_list_rule(void)
+{
+	/* implementation */
+}
+
+void parameter_type_list_rule(void)
+{
+	/* implementation */
+}
+
+void parameter_list_rule(void)
+{
+	/* implementation */
+}
+
+void parameter_declaration_rule(void)
+{
+	/* implementation */
+}
+
+void abstract_declarator_rule(void)
+{
+	/* implementation */
+}
+
+void direct_abstract_declarator_rule(void)
+{
+	/* implementation */
+}
+
+void dad_rule(void)
+{
+	/* implementation */
+}
+
+void identifier_rule(void)
+{
+	/* implementation */
+}
+
+void pointer_rule(void)
+{
+	/* implementation */
+}
+
+void type_qualifier_list_rule(void)
+{
+	/* implementation */
+}
+
+void function_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void storage_class_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void type_qualifier_rule(void)
+{
+	/* implementation */
+}
+
+void atomic_type_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void type_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void typedef_name_rule(void)
+{
+	/* implementation */
+}
+
+void struct_or_union_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void struct_declaration_list_rule(void)
+{
+	/* implementation */
+}
+
+void struct_declaration_rule(void)
+{
+	/* implementation */
+}
+
+void type_name_rule(void)
+{
+	/* implementation */
+}
+
+void specifier_qualifier_list_rule(void)
+{
+	/* implementation */
+}
+
+void struct_or_union_rule(void)
+{
+	/* implementation */
+}
+
+void enum_specifier_rule(void)
+{
+	/* implementation */
+}
+
+void enumerator_list_rule(void)
+{
+	/* implementation */
+}
+
+void enumerator_rule(void)
+{
+	/* implementation */
+}
+
+void comment_c_rule(void)
+{
+	/* implementation */
+}
+
+void comment_cxx_rule(void)
+{
+	/* implementation */
+}
+
+void constant_rule(void)
+{
+	/* implementation */
+}
+
+void identifier_word_rule(void)
+{
+	/* implementation */
+}
+
+void reserved_rule(void)
+{
+	/* implementation */
 }
