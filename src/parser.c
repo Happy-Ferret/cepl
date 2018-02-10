@@ -299,6 +299,7 @@ static inline bool expect(enum sym_type type)
 
 void translation_unit_rule(void)
 {
+	/* if (!strcmp(tok_list.list[sym_idx], symbols[type].name)) */
 	if (accept(EXTERNAL_DECLARATION))
 		external_declaration_rule();
 
