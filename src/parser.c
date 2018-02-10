@@ -269,6 +269,7 @@ struct prod_rule symbols[] = {
 
 /* current symbol */
 static size_t sym_idx;
+static enum sym_type cur_sym = TRANSLATION_UNIT;
 static struct str_list tok_list;
 
 static inline void next_sym(void)
@@ -281,7 +282,7 @@ static inline void next_sym(void)
 
 static inline bool accept(enum sym_type type)
 {
-	if (type) {
+	if (cur_sym == type) {
 		next_sym();
 		return true;
 	}
@@ -298,6 +299,9 @@ static inline bool expect(enum sym_type type)
 
 void translation_unit_rule(void)
 {
+	if (accept(EXTERNAL_DECLARATION))
+		external_declaration_rule();
+
 	(void)tok_list, (void)expect, (void)start_rule;
 }
 
